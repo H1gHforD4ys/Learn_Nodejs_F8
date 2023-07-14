@@ -23,7 +23,8 @@ app.set('views', './src/resources/views');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 // Thiết lập route
-const route = require('./routes/index');
+const route = require('./routes/index'); //lấy hàm route
+//phải gọi đúng tên của hàm 
 route(app); //bắt đầu đi từ đây đến chạy đến hàm route của index trong routes
 
 
