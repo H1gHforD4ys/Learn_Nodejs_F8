@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-//middleware xử lí
+//middleware xử lí gần giống với controller
 app.use(express.urlencoded({
     extended: true
 }));
@@ -22,24 +22,9 @@ app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
 app.set('views', path.join(__dirname, 'resources/views'));
 
-app.get('/', (req, res) => { 
-    res.render('home');
-});
-
-app.get('/news', (req, res) => { 
-    res.render('news');
-});
-
-app.get('/search', (req, res) => { 
-    //console.log(req.query.keyword);
-    res.render('search');
-});
-
-app.post('/search', (req, res) => { 
-    console.log(req.body);
-    res.send('');
-});
-
+// Thiết lập route
+const route = require('./routes/index');
+route(app); //bắt đầu đi từ đây đến chạy đến hàm route của index trong routes
 
 
 app.listen(port, () => {
