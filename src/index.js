@@ -15,11 +15,9 @@ app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
 app.set('views', path.join(__dirname, 'resources/views'));
 
-app.get('/', (req, res) => {
-    
+app.get('/', (req, res) => { 
     res.render('home');
 });
-
 
 
 app.listen(port, () => {
