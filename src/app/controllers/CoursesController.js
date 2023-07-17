@@ -24,7 +24,7 @@ class CoursesController{
         course.save() 
         .then(() => res.redirect('/'))
         .catch(error => {
-            res.send('404');
+            
         });
 
         //res.send('Course Saved!!');
