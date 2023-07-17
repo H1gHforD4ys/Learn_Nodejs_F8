@@ -3,6 +3,8 @@ const router = express.Router(); //khai báo một đối tượng router trong 
 
 const coursesController = require('../app/controllers/CoursesController');
 
+router.get('/create', coursesController.create);
+router.post('/store',coursesController.store);
 //định dạng chi tiết router và gọi lại controller
 router.get('/:slug', coursesController.showSingleCourse); 
 
