@@ -21,10 +21,10 @@ class CoursesController{
         const formData = req.body;
         formData.image = 'https://www.youtube.com/watch?v=${req.body.videoId}';
         const course = new Course(formData); // mapping lại dữ liệu 
-        course.save()
+        course.save() 
         .then(() => res.redirect('/'))
         .catch(error => {
-
+            res.send('404');
         });
 
         //res.send('Course Saved!!');
