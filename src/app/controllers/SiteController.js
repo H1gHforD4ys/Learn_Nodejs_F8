@@ -1,4 +1,4 @@
-const Course = require('../models/Course'); 
+const Course = require('../models/Course');
 const { multipleMongooseToObject } /*Viết tnay để lấy hàm bên trong(phải để đúng tên hàm)*/= require('../../util/mongoose');
 //Viết controller ở đây
 class SiteController{
