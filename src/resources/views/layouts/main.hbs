@@ -12,11 +12,11 @@
     </head>
     <body>
         <div class="app">
-            {{> header}}
+            {{> header}} <!-- Phần header có trong partiels -->
 
-            {{{body}}}
+            {{{body}}} <!-- phần này sẽ được render ra từ controller-->
 
-            {{> footer}}
+            {{> footer}} <!-- Tương tự như header nhưng là footer -->
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
