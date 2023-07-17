@@ -6,6 +6,6 @@ const newsController = require('../app/controllers/NewsController');
 //định dạng chi tiết router và gọi lại controller
 router.use('/show/:slug', newsController.show); 
 //newsController.index
-router.use('/', newsController.index);// api có dạng /news/ thì gọi đến hàm index đã viết trong newsController // cái này phải chạy cuối cùng
+router.get('/', newsController.index);// api có dạng /news/ thì gọi đến hàm index đã viết trong newsController // cái này phải chạy cuối cùng
 
 module.exports = router; // xuất ra router ở đây

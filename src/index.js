@@ -22,6 +22,10 @@ app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
 app.set('views', path.join(__dirname, 'resources/views'));
 
+//connect Database
+const db = require('./config/db/index'); // ./ là trỏ đến thư mục hiện tại còn ../ là trỏ đến thư mục cha
+db.connect();
+
 // Thiết lập route
 const router = require('./routes/index'); //lấy hàm route ở đường dẫn 
 
