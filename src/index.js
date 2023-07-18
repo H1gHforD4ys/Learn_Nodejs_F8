@@ -24,8 +24,8 @@ app.engine('hbs', engine({
 })); //Định nghĩa đuôi mở rộng
 
 //dùng method override 
-var methodOverride = require('method-override')
-app.use(methodOverride('X-HTTP-Method-Override'))
+var methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
