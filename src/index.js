@@ -16,7 +16,16 @@ app.use(morgan('combined'));
 
 // Template engine setup
 const { engine } = require('express-handlebars');
-app.engine('hbs', engine({ extname: '.hbs' })); //Định nghĩa đuôi mở rộng
+app.engine('hbs', engine({ 
+    extname: '.hbs',
+    helpers: {
+        sum: (a,b) => a+b //Cấu hình helper
+    } 
+})); //Định nghĩa đuôi mở rộng
+
+//dùng method override 
+var methodOverride = require('method-override')
+app.use(methodOverride('X-HTTP-Method-Override'))
 
 app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
